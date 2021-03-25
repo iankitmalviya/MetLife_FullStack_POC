@@ -1,0 +1,10 @@
+ <h1 style="color:darkgoldenrod;">Submit Data to server</h1>
+<div class="form-group">
+    <form #user="ngForm" (ngSubmit)="onClick(user.value)" >
+        <div class="form-group"> Employee ID: <input type="number" ngModel name="id" placeholder="Ex.122"></div>
+        <div class="form-group">Employee Name:<input type="text"ngModel  name="ename" placeholder="ex.abc"></div>
+        <div class="form-group"> Employee: City<input type="text" ngModel name="ecity" placeholder="ex.xyz"></div>
+        <div class="form-group"><button type="submit">Register</button></div>
+    </form>
+    <div [ngStyle]="{'visibility':isDivVisible ? 'visible' : 'hidden'}"><h3 style="color:hotpink;">Data Submitted</h3></div>
+</div>

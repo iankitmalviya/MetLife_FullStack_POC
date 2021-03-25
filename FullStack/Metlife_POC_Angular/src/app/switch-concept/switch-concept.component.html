@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul class="nav nav-pills active">
+        <li [class.active]="viewMode=='map'"><a (click)="viewMode='map'">MapView </a> &nbsp;</li> 
+        <li [class.active]="viewMode=='list'"><a (click)="viewMode='list'">ListView </a></li> 
+        </ul>
+        
+        
+        <div [ngSwitch]="viewMode">
+            <div *ngSwitchCase="'map'">Map Content</div>
+            <div *ngSwitchCase="'list'">List Content</div>
+            <div *ngSwitchDefault>OtherWise Content</div>
+        
+        </div>
+</body>
+</html>

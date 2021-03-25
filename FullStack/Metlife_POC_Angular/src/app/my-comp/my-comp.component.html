@@ -1,0 +1,8 @@
+<p>my-comp works!</p>
+
+<div style="text-align: center;"> 
+    <input [(ngModel)]="email" type='text' (keyup.enter)="onKeyUp()">
+ </div>
+ <app-fav-comp [isFav]="post.status" (change)="onFavChnage()" ></app-fav-comp>
+ 
+ 
